@@ -19,7 +19,7 @@ describe("Bowling", () => {
     addThrow(0, 20);
     expect(bowling.getScore()).toBe(0);
   })
-  it("zero pin falls, all gutters", () => {
+  it("three pins fall at each turn", () => {
     addThrow(3, 20);
     expect(bowling.getScore()).toBe(60);
   })
