@@ -12,8 +12,13 @@ export class Bowling {
       score += this.throws[throwIndex];
       score += this.throws[throwIndex + 1];
 
-      if (this.throws[throwIndex] + this.throws[throwIndex + 1] === 10) {
+      if (this.throws[throwIndex] + this.throws[throwIndex + 1] === 10
+        || this.throws[throwIndex] === 10) {
         score += this.throws[throwIndex + 2];
+      }
+
+      if (this.throws[throwIndex] === 10) {
+        throwIndex--;
       }
     }
     return score;

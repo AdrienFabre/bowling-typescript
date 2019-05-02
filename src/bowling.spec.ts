@@ -27,10 +27,20 @@ describe("Bowling", () => {
     addThrow(5, 2);
     addThrow(0, 18);
     expect(bowling.getScore()).toBe(10);
-  })
+  });
   it("one spare and all threes", () => {
     addThrow(5, 2);
     addThrow(3, 18);
     expect(bowling.getScore()).toBe(67);
-  })
-})
+  });
+  it("one strike and all gutters", () => {
+    addThrow(10, 1);
+    addThrow(0, 18);
+    expect(bowling.getScore()).toBe(10);
+  });
+  it("one strike and all threes", () => {
+    addThrow(10, 1);
+    addThrow(3, 18);
+    expect(bowling.getScore()).toBe(70);
+  });
+});
