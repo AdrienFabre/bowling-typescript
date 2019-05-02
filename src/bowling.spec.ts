@@ -43,4 +43,8 @@ describe("Bowling", () => {
     addThrow(3, 18);
     expect(bowling.getScore()).toBe(70);
   });
+  it("perfect game, twelve strikes", () => {
+    addThrow(10, 12);
+    expect(bowling.getScore()).toBe(300);
+  });
 });
